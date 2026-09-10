@@ -1,0 +1,281 @@
+:root {
+  --bg: #111318;
+  --card: #1a1d24;
+  --text: #e8eaed;
+  --muted: #9aa0a8;
+  --border: rgba(255, 255, 255, 0.1);
+  --primary: #5b9aff;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px 16px 32px;
+}
+
+.header {
+  margin-bottom: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.brand-tag {
+  display: none;
+}
+
+.header-actions {
+  margin-left: auto;
+}
+
+.btn-install {
+  font-size: 13px;
+  padding: 6px 12px;
+}
+
+.title {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  margin-top: 12px;
+}
+
+.label {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 120px;
+  resize: vertical;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  padding: 10px;
+  outline: none;
+  line-height: 1.45;
+  font-size: 14px;
+}
+
+.textarea:focus {
+  border-color: var(--primary);
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-primary {
+  border-color: rgba(91, 154, 255, 0.4);
+  background: rgba(91, 154, 255, 0.12);
+  color: var(--text);
+}
+
+.btn-secondary {
+  color: var(--muted);
+}
+
+.h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.results {
+  display: grid;
+  gap: 10px;
+}
+
+.result-group {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.result-group-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.result-group-title .name {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.result-group-title .count {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.result-list {
+  display: grid;
+  gap: 8px;
+}
+
+.result-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: start;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.result-item:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.result-value {
+  word-break: break-word;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.result-actions {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.btn.btn-small {
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  .result-item {
+    grid-template-columns: 1fr;
+  }
+
+  .result-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+.action-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.badge {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.details {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.details summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.examples {
+  display: grid;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.example-title {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.pre {
+  margin: 0;
+  white-space: pre-wrap;
+  border-radius: 6px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.footer {
+  margin-top: 12px;
+}
+
+.footnote {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}

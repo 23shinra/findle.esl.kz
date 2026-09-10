@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#111318" />
+    <meta name="description" content="Вставь текст — получи кнопки WhatsApp, Telegram, звонок, ссылки." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Findle" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Findle — вставь текст → получи кнопки</title>
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+    <link rel="stylesheet" href="./style.css?v=3" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <div class="brand">
+          <div class="brand-name">Findle</div>
+          <div class="header-actions">
+            <button id="installBtn" class="btn btn-secondary btn-install" type="button" hidden>
+              Установить
+            </button>
+          </div>
+        </div>
+        <h1 class="title">Вставь текст — получи кнопки</h1>
+        <p class="subtitle">Телефон, Instagram, Telegram, email и ссылки из любого текста.</p>
+      </header>
+
+      <section class="card">
+        <label class="label" for="inputText">Текст</label>
+        <textarea
+          id="inputText"
+          class="textarea"
+          placeholder="Текст подставится из буфера при открытии или вставь вручную (Ctrl+V)…"
+          spellcheck="false"
+        ></textarea>
+
+        <div class="row">
+          <button id="clearBtn" class="btn btn-secondary" type="button">
+            Очистить
+          </button>
+          <button id="pasteBtn" class="btn btn-secondary" type="button">
+            Вставить из буфера
+          </button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 class="h2">Найдено</h2>
+
+        <div id="results" class="results" aria-live="polite"></div>
+
+        <details class="details">
+          <summary>Примеры, которые понимает</summary>
+          <div class="examples">
+            <div class="example">
+              <div class="example-title">Телефон → 7747…</div>
+              <pre class="pre">+7 (747) 123-45-67 → 77471234567
+8 747 123 45 67 → 77471234567
+747 123 45 67 → 77471234567</pre>
+            </div>
+            <div class="example">
+              <div class="example-title">Instagram</div>
+              <pre class="pre">@username
+instagram.com/username
+https://www.instagram.com/username/</pre>
+            </div>
+            <div class="example">
+              <div class="example-title">Telegram</div>
+              <pre class="pre">@tg_user
+t.me/tg_user
+https://t.me/tg_user</pre>
+            </div>
+            <div class="example">
+              <div class="example-title">Email</div>
+              <pre class="pre">test.mail+1@gmail.com
+name@domain.ru</pre>
+            </div>
+            <div class="example">
+              <div class="example-title">Ссылки</div>
+              <pre class="pre">example.com
+www.example.com/path
+https://site.ru/path).</pre>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <footer class="footer">
+        <div class="footnote">Буфер подставляется при открытии, если поле пустое.</div>
+      </footer>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
+    <script src="./app.js?v=3"></script>
+  </body>
+</html>

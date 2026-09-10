@@ -1,0 +1,22 @@
+{
+  "name": "findle",
+  "version": "1.0.0",
+  "description": "Findle — парсит текст и даёт кнопки WhatsApp, Instagram, Telegram, email и ссылки. Статика в public/, API в server.js.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development PORT=5173 HOST=0.0.0.0 node server.js"
+  },
+  "keywords": ["findle", "contacts", "parser"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-rate-limit": "^7.5.0",
+    "sqlite3": "^6.0.1"
+  }
+}
